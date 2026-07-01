@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotAtlas</title>
+  <meta
+    name="description"
+    content="SpotAtlas, une vitrine claire et moderne pour presenter votre projet sur GitHub Pages."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Retour en haut de la page">
+        <span class="brand-mark">SA</span>
+        <span class="brand-text">SpotAtlas</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+        <a href="#concept">Concept</a>
+        <a href="#points-forts">Points forts</a>
+        <a href="#a-propos">A propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">GitHub Pages Ready</p>
+          <h1>
+            Donne une vraie presence
+            <span>web</span>
+            a ton projet.
+          </h1>
+          <p class="hero-text">
+            Une base rapide, claire et elegante pour presenter SpotAtlas,
+            ton idee, ton produit ou ton portfolio sans dependance complexe.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Lancer le projet</a>
+            <a class="button button-secondary" href="#points-forts">Voir la structure</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal reveal-delay">
+          <div class="card-grid">
+            <article>
+              <span>01</span>
+              <h2>Simple</h2>
+              <p>Trois fichiers faciles a modifier.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h2>Responsive</h2>
+              <p>Lisible sur mobile comme sur desktop.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h2>Propre</h2>
+              <p>Une structure nette pour evoluer vite.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h2>Publie</h2>
+              <p>Parfait pour un deploiement GitHub Pages.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="concept" class="section split-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Concept</p>
+          <h2>Une page d'accueil qui va droit au but</h2>
+        </div>
+        <div class="split-content">
+          <article class="panel reveal">
+            <p>
+              SpotAtlas peut devenir une presentation produit, une carte de
+              lieux, un portfolio, un projet scolaire ou une vitrine startup.
+            </p>
+          </article>
+          <article class="panel accent reveal reveal-delay">
+            <p>
+              Tu peux remplacer les textes, les sections et les couleurs sans
+              toucher a une architecture complexe.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="points-forts" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Points forts</p>
+          <h2>Une base organisee pour aller vite</h2>
+        </div>
+
+        <div class="features">
+          <article class="feature-card reveal">
+            <h3>HTML clair</h3>
+            <p>Des sections logiques, faciles a relire et a etendre.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>CSS centralise</h3>
+            <p>Variables, composants et responsive regroupes proprement.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>JS leger</h3>
+            <p>Menu mobile, animations d'entree et annee automatique.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="a-propos" class="section about-section">
+        <div class="about-card reveal">
+          <p class="eyebrow">A propos</p>
+          <h2>Une base sobre, mais pas banale</h2>
+          <p>
+            Le design utilise une direction visuelle lumineuse, avec des
+            contrastes doux, des formes de fond et une typographie un peu plus
+            editoriale qu'un template standard.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-box reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Prêt a personnaliser cette page</h2>
+          <p>
+            Remplace ce bloc par ton email, ton lien GitHub, ton portfolio ou
+            un formulaire externe.
+          </p>
+          <a class="button button-primary" href="mailto:contact@example.com">contact@example.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="current-year"></span> SpotAtlas. Tous droits reserves.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
