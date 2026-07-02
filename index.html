@@ -6,7 +6,7 @@
   <title>SpotAtlas</title>
   <meta
     name="description"
-    content="SpotAtlas, une vitrine claire et moderne pour presenter votre projet sur GitHub Pages."
+    content="SpotAtlas, une interface web responsive orientee carte pour explorer des amenites OpenStreetMap avec des filtres riches."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Retour en haut de la page">
+      <a class="brand" href="#top" aria-label="Retour en haut">
         <span class="brand-mark">SA</span>
-        <span class="brand-text">SpotAtlas</span>
+        <span class="brand-copy">
+          <strong>SpotAtlas</strong>
+          <small>Atlas OSM des amenites du quotidien</small>
+        </span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -29,128 +35,271 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-        <a href="#concept">Concept</a>
-        <a href="#points-forts">Points forts</a>
-        <a href="#a-propos">A propos</a>
-        <a href="#contact">Contact</a>
+        <a href="#explorer">Explorer</a>
+        <a href="#filtres">Filtres</a>
+        <a href="#dataset">Dataset</a>
+        <a href="#mobile">Mobile</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero section">
         <div class="hero-copy reveal">
-          <p class="eyebrow">GitHub Pages Ready</p>
+          <p class="eyebrow">Application Cartographique</p>
           <h1>
-            Donne une vraie presence
-            <span>web</span>
-            a ton projet.
+            Explore les objets
+            <span>OSM utiles</span>
+            sur une interface claire.
           </h1>
           <p class="hero-text">
-            Une base rapide, claire et elegante pour presenter SpotAtlas,
-            ton idee, ton produit ou ton portfolio sans dependance complexe.
+            SpotAtlas peut presenter une carte, des couches d'amenites et des
+            filtres detailes pour les bancs, tables de pique-nique, poubelles,
+            toilettes, recyclage, acces et bien plus.
           </p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Lancer le projet</a>
-            <a class="button button-secondary" href="#points-forts">Voir la structure</a>
+            <a class="button button-primary" href="#explorer">Voir la maquette</a>
+            <a class="button button-secondary" href="#filtres">Parcourir les filtres</a>
+          </div>
+
+          <div class="hero-stats">
+            <article>
+              <strong>50+</strong>
+              <span>filtres possibles</span>
+            </article>
+            <article>
+              <strong>OSM</strong>
+              <span>key-values organisees</span>
+            </article>
+            <article>
+              <strong>Mobile</strong>
+              <span>filtres replisables</span>
+            </article>
           </div>
         </div>
 
-        <div class="hero-card reveal reveal-delay">
-          <div class="card-grid">
-            <article>
-              <span>01</span>
-              <h2>Simple</h2>
-              <p>Trois fichiers faciles a modifier.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h2>Responsive</h2>
-              <p>Lisible sur mobile comme sur desktop.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h2>Propre</h2>
-              <p>Une structure nette pour evoluer vite.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h2>Publie</h2>
-              <p>Parfait pour un deploiement GitHub Pages.</p>
-            </article>
+        <div class="map-preview reveal reveal-delay">
+          <div class="map-toolbar">
+            <span class="toolbar-pill active">Amenites</span>
+            <span class="toolbar-pill">Accessibilite</span>
+            <span class="toolbar-pill">Recyclage</span>
+          </div>
+
+          <div class="map-surface">
+            <div class="grid-lines"></div>
+            <div class="route route-a"></div>
+            <div class="route route-b"></div>
+            <div class="route route-c"></div>
+
+            <button class="map-pin pin-bench" type="button">
+              <span>Bancs</span>
+            </button>
+            <button class="map-pin pin-picnic" type="button">
+              <span>Pique-nique</span>
+            </button>
+            <button class="map-pin pin-bin" type="button">
+              <span>Poubelles</span>
+            </button>
+            <button class="map-pin pin-toilet" type="button">
+              <span>Toilettes</span>
+            </button>
+
+            <aside class="map-float-card">
+              <p class="eyebrow">Vue active</p>
+              <h2>Rhone-Alpes</h2>
+              <ul>
+                <li>Filtre amenity=bench</li>
+                <li>Filtre recycling=true</li>
+                <li>Filtre fee=false</li>
+              </ul>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section id="concept" class="section split-section">
+      <section id="explorer" class="section app-section">
         <div class="section-heading reveal">
-          <p class="eyebrow">Concept</p>
-          <h2>Une page d'accueil qui va droit au but</h2>
-        </div>
-        <div class="split-content">
-          <article class="panel reveal">
-            <p>
-              SpotAtlas peut devenir une presentation produit, une carte de
-              lieux, un portfolio, un projet scolaire ou une vitrine startup.
-            </p>
-          </article>
-          <article class="panel accent reveal reveal-delay">
-            <p>
-              Tu peux remplacer les textes, les sections et les couleurs sans
-              toucher a une architecture complexe.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="points-forts" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Points forts</p>
-          <h2>Une base organisee pour aller vite</h2>
-        </div>
-
-        <div class="features">
-          <article class="feature-card reveal">
-            <h3>HTML clair</h3>
-            <p>Des sections logiques, faciles a relire et a etendre.</p>
-          </article>
-          <article class="feature-card reveal">
-            <h3>CSS centralise</h3>
-            <p>Variables, composants et responsive regroupes proprement.</p>
-          </article>
-          <article class="feature-card reveal">
-            <h3>JS leger</h3>
-            <p>Menu mobile, animations d'entree et annee automatique.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="a-propos" class="section about-section">
-        <div class="about-card reveal">
-          <p class="eyebrow">A propos</p>
-          <h2>Une base sobre, mais pas banale</h2>
-          <p>
-            Le design utilise une direction visuelle lumineuse, avec des
-            contrastes doux, des formes de fond et une typographie un peu plus
-            editoriale qu'un template standard.
+          <p class="eyebrow">Explorer</p>
+          <h2>Une mise en page pensee pour la carte avant tout</h2>
+          <p class="section-intro">
+            La maquette ci-dessous reserve un grand espace a la carte, puis
+            range les filtres dans une colonne dense sur desktop et dans un
+            panneau coulissant sur telephone.
           </p>
         </div>
+
+        <div class="app-layout reveal">
+          <aside id="filtres" class="filters-panel" aria-label="Filtres OSM">
+            <div class="filters-header">
+              <div>
+                <p class="eyebrow">Filtres</p>
+                <h3>Categories OSM</h3>
+              </div>
+              <button class="filters-toggle" type="button" aria-expanded="false" aria-controls="filters-content">
+                Filtres
+              </button>
+            </div>
+
+            <div id="filters-content" class="filters-content">
+              <div class="search-box">
+                <label for="filter-search">Recherche rapide</label>
+                <input id="filter-search" type="search" placeholder="bench, toilets, recycling...">
+              </div>
+
+              <section class="filter-group">
+                <div class="filter-group-header">
+                  <h4>Amenites principales</h4>
+                  <span>12 tags</span>
+                </div>
+                <div class="chip-grid">
+                  <button class="filter-chip is-selected" type="button">Bench</button>
+                  <button class="filter-chip" type="button">Picnic Table</button>
+                  <button class="filter-chip" type="button">Waste Basket</button>
+                  <button class="filter-chip" type="button">Toilets</button>
+                  <button class="filter-chip" type="button">Drinking Water</button>
+                  <button class="filter-chip" type="button">Shelter</button>
+                </div>
+              </section>
+
+              <section class="filter-group">
+                <div class="filter-group-header">
+                  <h4>Options booleennes</h4>
+                  <span>fee, recycling, access</span>
+                </div>
+                <div class="toggle-list">
+                  <label class="switch-row">
+                    <span>Recyclage uniquement</span>
+                    <input type="checkbox" checked>
+                  </label>
+                  <label class="switch-row">
+                    <span>Toilettes gratuites</span>
+                    <input type="checkbox">
+                  </label>
+                  <label class="switch-row">
+                    <span>Accessible PMR</span>
+                    <input type="checkbox">
+                  </label>
+                </div>
+              </section>
+
+              <section class="filter-group">
+                <div class="filter-group-header">
+                  <h4>Facettes avancees</h4>
+                  <span>type, etat, acces</span>
+                </div>
+                <div class="facet-list">
+                  <article class="facet-card">
+                    <strong>Poubelles</strong>
+                    <p>recycling=true, operator, indoor, covered</p>
+                  </article>
+                  <article class="facet-card">
+                    <strong>Toilettes</strong>
+                    <p>fee, unisex, wheelchair, opening_hours</p>
+                  </article>
+                  <article class="facet-card">
+                    <strong>Mobilier</strong>
+                    <p>material, backrest, capacity, condition</p>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </aside>
+
+          <div class="map-panel">
+            <div class="panel-topbar">
+              <div>
+                <p class="eyebrow">Carte interactive</p>
+                <h3>Zone carto principale</h3>
+              </div>
+              <div class="topbar-actions">
+                <button class="ghost-button" type="button">Basculer en liste</button>
+                <button class="ghost-button" type="button">Exporter</button>
+              </div>
+            </div>
+
+            <div class="map-stage">
+              <div class="map-badge badge-a">24 bancs</div>
+              <div class="map-badge badge-b">11 toilettes</div>
+              <div class="map-badge badge-c">38 poubelles</div>
+
+              <div class="stage-overlay">
+                <article class="overlay-card">
+                  <p class="eyebrow">Selection</p>
+                  <h4>Toilettes publiques</h4>
+                  <p>fee=false, wheelchair=yes, opening_hours renseigne</p>
+                </article>
+                <article class="overlay-card compact">
+                  <p class="eyebrow">Resultats</p>
+                  <strong>73 spots visibles</strong>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="contact-box reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Prêt a personnaliser cette page</h2>
-          <p>
-            Remplace ce bloc par ton email, ton lien GitHub, ton portfolio ou
-            un formulaire externe.
-          </p>
-          <a class="button button-primary" href="mailto:contact@example.com">contact@example.com</a>
+      <section id="dataset" class="section content-grid-section">
+        <div class="content-grid">
+          <article class="info-panel reveal">
+            <p class="eyebrow">Structure</p>
+            <h2>Des filtres pensés pour monter en volume</h2>
+            <p>
+              Au lieu d'afficher toutes les key-values en vrac, l'interface peut
+              grouper les filtres par familles: amenity, accessibilite, etat,
+              operateur, tarification, couverture, interieur/exterieur.
+            </p>
+          </article>
+
+          <article class="info-panel accent reveal reveal-delay">
+            <p class="eyebrow">UX mobile</p>
+            <h2>Sur telephone, la carte reste prioritaire</h2>
+            <p>
+              Les filtres se ferment dans un tiroir plein ecran avec recherche,
+              chips scrollables et interrupteurs larges pour garder une bonne
+              lisibilite au pouce.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="mobile" class="section mobile-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Mobile</p>
+          <h2>Le comportement responsive est deja prevu</h2>
+        </div>
+
+        <div class="mobile-showcase reveal">
+          <article class="phone-card">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-map"></div>
+              <div class="phone-drawer">
+                <div class="drawer-handle"></div>
+                <strong>Filtres actifs</strong>
+                <p>Bench, Toilets, recycling=true</p>
+                <div class="mini-chips">
+                  <span>fee=false</span>
+                  <span>wheelchair=yes</span>
+                  <span>covered=no</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="mobile-copy">
+            <p>
+              Cette version reste legere pour GitHub Pages, mais la structure
+              est deja adaptee pour brancher ensuite une vraie carte Leaflet,
+              MapLibre ou OpenLayers.
+            </p>
+            <a class="button button-primary" href="mailto:contact@example.com">Personnaliser SpotAtlas</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="current-year"></span> SpotAtlas. Tous droits reserves.</p>
+      <p>© <span id="current-year"></span> SpotAtlas. Prototype d'interface cartographique OSM.</p>
     </footer>
   </div>
 
